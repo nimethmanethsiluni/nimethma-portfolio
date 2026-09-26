@@ -33,10 +33,9 @@ export default function Navbar() {
           to="home"
           smooth
           duration={600}
-          className="text-xl font-bold tracking-tight cursor-pointer"
-          style={{ color: "var(--color-accent)" }}
+          className="text-xl font-bold tracking-tight cursor-pointer text-slate-100"
         >
-          NN<span className="opacity-60">.</span>
+          <span style={{ color: "var(--color-accent)" }}>N</span>IMETHMA
         </Link>
 
         {/* Desktop nav */}
