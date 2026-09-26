@@ -14,8 +14,8 @@ export const personalInfo = {
   github: "https://github.com/nimethma",
   linkedin: "https://linkedin.com/in/nimethma",
   location: "Colombo, Sri Lanka",
-  cvPath: "/assets/cv/Nimethma_Nethsiluni_CV.pdf",
-  profileImage: "/assets/profile.jpg",
+  cvPath: `${import.meta.env.BASE_URL}assets/cv/Nimethma_Nethsiluni_CV.pdf`,
+  profileImage: `${import.meta.env.BASE_URL}assets/profile.jpg`,
 };
 
 // ─── About / Bio ─────────────────────────────────────────────────────
@@ -89,7 +89,7 @@ export const projects = [
       "RAG",
       "LLMs",
     ],
-    image: "/assets/projects/justicepal.jpg",
+    image: `${import.meta.env.BASE_URL}assets/projects/justicepal.jpg`,
     github: "https://github.com/nimethma/justicepal",
     live: null,
   },
@@ -101,7 +101,7 @@ export const projects = [
     description:
       "Analyzed Sri Lanka's 2022 currency crisis, uncovering the depreciation timeline and its lagged link to inflation. Cleaned government data with Python, built a PostgreSQL database, and designed an interactive Power BI dashboard using window-function SQL analysis.",
     tech: ["PostgreSQL (Neon)", "Python", "Power BI", "SQL"],
-    image: "/assets/projects/exchange-rate.jpg",
+    image: `${import.meta.env.BASE_URL}assets/projects/exchange-rate.jpg`,
     github: "https://github.com/nimethma/exchange-rate-analysis",
     live: null,
   },
@@ -113,7 +113,7 @@ export const projects = [
     description:
       "Developed a responsive e-commerce platform for showcasing and selling handcrafted Sri Lankan batik products — product browsing, cart management, user authentication, custom orders, and an artisan dashboard.",
     tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS"],
-    image: "/assets/projects/loome.jpg",
+    image: `${import.meta.env.BASE_URL}assets/projects/loome.jpg`,
     github: "https://github.com/nimethma/loome",
     live: "https://loome.vercel.app",
   },
@@ -127,7 +127,7 @@ export const volunteering = [
     organization:
       "Society of Computer Sciences (SOCS), Sabaragamuwa University of Sri Lanka",
     period: "2025 – Present",
-    image: "/assets/volunteering/socs.jpg",
+    image: `${import.meta.env.BASE_URL}assets/volunteering/socs.jpg`,
   },
   {
     id: "designora",
@@ -135,7 +135,7 @@ export const volunteering = [
     organization:
       "Designora Workshop, IEEE Women in Engineering Affinity Group, SUSL",
     period: "2026 – Present",
-    image: "/assets/volunteering/designora.jpg",
+    image: `${import.meta.env.BASE_URL}assets/volunteering/designora.jpg`,
   },
   {
     id: "aurelia",
@@ -143,7 +143,7 @@ export const volunteering = [
     organization:
       "AURELIA IEEE WIE Day 2026, IEEE Women in Engineering Affinity Group, SUSL",
     period: "2026",
-    image: "/assets/volunteering/aurelia.jpg",
+    image: `${import.meta.env.BASE_URL}assets/volunteering/aurelia.jpg`,
   },
   {
     id: "pixel-pioneers",
@@ -151,7 +151,7 @@ export const volunteering = [
     organization:
       "Pixel Pioneers Game Jam v1, IEEE Computer Society Student Branch Chapter of SUSL",
     period: "2026",
-    image: "/assets/volunteering/pixel-pioneers.jpg",
+    image: `${import.meta.env.BASE_URL}assets/volunteering/pixel-pioneers.jpg`,
   },
   {
     id: "icarc",
@@ -159,7 +159,7 @@ export const volunteering = [
     organization:
       "ICARC 2026, International Conference on Advanced Research and Computing, Faculty of Computing, SUSL",
     period: "2026",
-    image: "/assets/volunteering/icarc.jpg",
+    image: `${import.meta.env.BASE_URL}assets/volunteering/icarc.jpg`,
   },
 ];
 
