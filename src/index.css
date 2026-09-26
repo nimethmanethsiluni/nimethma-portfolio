@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* ─── Custom Theme ─────────────────────────────────────────────────── */
+@theme {
+  --color-bg: #1E293B;
+  --color-bg-light: #FFFFFF;
+  --color-bg-alt: #F8FAFC;
+  --color-accent: #14B8A6;
+  --color-accent-hover: #0D9488;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-text-on-dark: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-card-bg: #FFFFFF;
+
+  /* Dark-mode overrides (applied via .dark class) */
+  --color-dark-bg: #0F172A;
+  --color-dark-surface: #1E293B;
+  --color-dark-card: #1E293B;
+  --color-dark-border: #334155;
+}
+
+/* ─── Base reset & typography ──────────────────────────────────────── */
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: var(--color-bg-light);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body,
+  body.dark {
+    background: var(--color-dark-bg);
+    color: var(--color-text-on-dark);
+  }
+}
+
+/* ─── Utility helpers ──────────────────────────────────────────────── */
+.section-padding {
+  @apply px-6 py-20 md:px-12 lg:px-24 xl:px-32;
+}
+
+/* Teal pill/badge */
+.tech-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(20, 184, 166, 0.1);
+  color: var(--color-accent);
+  transition: background-color 0.2s;
+}
+.tech-pill:hover {
+  background: rgba(20, 184, 166, 0.2);
+}
+
+/* Primary CTA */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: var(--color-accent);
+  color: #fff;
+  transition: background-color 0.2s, transform 0.15s;
+}
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+/* Ghost / outline CTA */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-ghost:hover {
+  background: var(--color-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Card base */
+.card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.dark .card {
+  background: var(--color-dark-card);
+  border-color: var(--color-dark-border);
+}
+.dark .card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Section headings */
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.section-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-secondary);
+  border-radius: 4px;
+}
+
+/* Dark mode helpers */
+.dark .section-alt-bg {
+  background: var(--color-dark-surface);
+}
+.light-section-bg {
+  background: var(--color-bg-alt);
+}
+.dark .light-section-bg {
+  background: var(--color-dark-surface);
+}
