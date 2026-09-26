@@ -1,8 +1,13 @@
 // ─── Personal Info ───────────────────────────────────────────────────
 export const personalInfo = {
   name: "Nimethma Nethsiluni",
-  title:
-    "Information Systems Undergraduate | Project Management • Business Analysis • Data Analytics • Software Engineering",
+  title: "Information Systems Undergraduate | ",
+  roles: [
+    "Data Analyst",
+    "Business Analyst",
+    "Project Manager",
+    "Software Engineer"
+  ],
   tagline:
     "Bridging business needs with technology — from requirements to delivery.",
   email: "nimethma@example.com",

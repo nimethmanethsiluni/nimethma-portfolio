@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { FiDownload, FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
@@ -6,6 +7,30 @@ import { useTheme } from "../context/ThemeContext";
 
 export default function Hero() {
   const { dark } = useTheme();
+  
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = personalInfo.roles[roleIndex];
+    let typingSpeed = isDeleting ? 50 : 100;
+    
+    if (!isDeleting && text === currentRole) {
+      const timer = setTimeout(() => setIsDeleting(true), 1500);
+      return () => clearTimeout(timer);
+    } else if (isDeleting && text === "") {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % personalInfo.roles.length);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setText(currentRole.substring(0, text.length + (isDeleting ? -1 : 1)));
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, roleIndex]);
 
   return (
     <section
@@ -60,6 +85,14 @@ export default function Hero() {
 
           <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-3">
             {personalInfo.title}
+            <span style={{ color: "var(--color-accent)" }}>{text}</span>
+            <motion.span
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.8, repeat: Infinity }}
+              style={{ color: "var(--color-accent)" }}
+            >
+              |
+            </motion.span>
           </p>
 
           <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto lg:mx-0 mb-8">
