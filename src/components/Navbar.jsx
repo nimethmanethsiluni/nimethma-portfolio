@@ -61,15 +61,7 @@ export default function Navbar() {
 
         {/* Right side: theme toggle + mobile menu */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggle}
-            aria-label="Toggle theme"
-            className={`p-2 rounded-lg transition-colors ${
-              dark ? "hover:bg-white/10 text-slate-300" : "hover:bg-slate-100 text-slate-600"
-            }`}
-          >
-            {dark ? <FiSun size={18} /> : <FiMoon size={18} />}
-          </button>
+
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
