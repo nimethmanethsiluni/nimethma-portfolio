@@ -124,7 +124,7 @@ export default function Hero() {
             <img
               src={personalInfo.profileImage}
               alt={personalInfo.name}
-              className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full object-cover border-4 border-slate-700"
+              className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full object-cover object-top border-4 border-slate-700"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src =
