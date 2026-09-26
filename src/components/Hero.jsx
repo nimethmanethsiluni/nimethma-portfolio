@@ -83,17 +83,19 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-3">
-            {personalInfo.title}
-            <span style={{ color: "var(--color-accent)" }}>{text}</span>
-            <motion.span
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
-              style={{ color: "var(--color-accent)" }}
-            >
-              |
-            </motion.span>
-          </p>
+          <div className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-3">
+            <p className="mb-1">{personalInfo.title}</p>
+            <p className="font-medium text-lg sm:text-xl h-7">
+              <span style={{ color: "var(--color-accent)" }}>{text}</span>
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 0.8, repeat: Infinity }}
+                style={{ color: "var(--color-accent)" }}
+              >
+                |
+              </motion.span>
+            </p>
+          </div>
 
           <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto lg:mx-0 mb-8">
             {personalInfo.tagline}
