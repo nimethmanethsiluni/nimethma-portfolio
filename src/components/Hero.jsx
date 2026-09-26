@@ -97,7 +97,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto lg:mx-0 mb-8">
+          <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto lg:mx-0 mb-8 text-justify">
             {personalInfo.tagline}
           </p>
 
