@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { personalInfo } from "../data";
 import { useTheme } from "../context/ThemeContext";
 
@@ -37,8 +37,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-sm text-slate-500 flex items-center gap-1.5">
-          © {year} {personalInfo.name}. Built with
-          <FiHeart size={13} className="text-[var(--color-accent)]" />
+          © {year} {personalInfo.name}
         </p>
       </div>
     </footer>
