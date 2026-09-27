@@ -146,7 +146,6 @@ export default function Contact() {
                     name="name"
                     type="text"
                     required
-                    placeholder="John Doe"
                     value={form.name}
                     onChange={handleChange}
                     className={inputClasses}
@@ -166,7 +165,6 @@ export default function Contact() {
                     name="email"
                     type="email"
                     required
-                    placeholder="john@example.com"
                     value={form.email}
                     onChange={handleChange}
                     className={inputClasses}
