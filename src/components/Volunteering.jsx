@@ -27,9 +27,9 @@ export default function Volunteering() {
           </div>
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-6">
           {volunteering.map((v, i) => (
-            <Reveal key={v.id} custom={i}>
+            <Reveal key={v.id} custom={i} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
               <div className="card flex flex-col h-full">
                 {/* Image */}
                 <div className="relative overflow-hidden h-40 bg-slate-200 dark:bg-slate-700">
@@ -51,7 +51,7 @@ export default function Volunteering() {
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col flex-1 p-5">
+                <div className="flex flex-col items-center text-center flex-1 p-5">
                   <span
                     className="text-xs font-bold uppercase tracking-wider mb-2"
                     style={{ color: "var(--color-accent)" }}
