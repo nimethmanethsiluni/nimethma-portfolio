@@ -48,7 +48,7 @@ export const skills = [
   },
   {
     category: "Project Management & Design Tools",
-    items: ["Trello", "Jira", "ClickUp", "Figma"],
+    items: ["Trello", "Jira", "ClickUp", "Asana", "Figma"],
   },
   {
     category: "Data & Analytics",
