@@ -145,7 +145,7 @@ export default function Projects() {
           </div>
         </Reveal>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+        <div className="grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto items-stretch">
           {projects.map((project, i) => (
             <Reveal key={project.id} variants={scaleIn} custom={i} className="h-full">
               <ProjectCard project={project} />

@@ -75,7 +75,7 @@ export const projects = [
     id: "justicepal",
     title: "JusticePal",
     subtitle: "AI Lawyer Recommendation & Legal Assistance Platform",
-    role: "Knowledge Base Specialist",
+    role: null,
     description:
       'Contributed to an AI-powered legal assistance platform connecting clients with suitable legal professionals. Supported project planning, task coordination, documentation, feature development, and cross-functional collaboration across frontend, backend, database, AI, and system integration. Built the RAG-based "Consult AI" FAQ chatbot and managed the Pinecone vector database.',
     tech: [
@@ -89,7 +89,7 @@ export const projects = [
       "RAG",
       "LLMs",
     ],
-    image: `${import.meta.env.BASE_URL}assets/projects/justicepal.jpg`,
+    image: `${import.meta.env.BASE_URL}assets/projects/justicepal.png`,
     github: "https://github.com/nimethma/justicepal",
     live: null,
   },
@@ -101,21 +101,9 @@ export const projects = [
     description:
       "Analyzed Sri Lanka's 2022 currency crisis, uncovering the depreciation timeline and its lagged link to inflation. Cleaned government data with Python, built a PostgreSQL database, and designed an interactive Power BI dashboard using window-function SQL analysis.",
     tech: ["PostgreSQL (Neon)", "Python", "Power BI", "SQL"],
-    image: `${import.meta.env.BASE_URL}assets/projects/exchange-rate.jpg`,
+    image: `${import.meta.env.BASE_URL}assets/projects/exchange-rate.png`,
     github: "https://github.com/nimethma/exchange-rate-analysis",
     live: null,
-  },
-  {
-    id: "loome",
-    title: "Loome",
-    subtitle: "Handcrafted Batik E-Commerce Platform",
-    role: null,
-    description:
-      "Developed a responsive e-commerce platform for showcasing and selling handcrafted Sri Lankan batik products — product browsing, cart management, user authentication, custom orders, and an artisan dashboard.",
-    tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS"],
-    image: `${import.meta.env.BASE_URL}assets/projects/loome.jpg`,
-    github: "https://github.com/nimethma/loome",
-    live: "https://loome.vercel.app",
   },
 ];
 
