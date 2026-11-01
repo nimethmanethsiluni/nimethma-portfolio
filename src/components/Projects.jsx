@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="card flex flex-col">
+    <div className="card flex flex-col h-full">
       {/* Image */}
       <div className="relative overflow-hidden h-48 bg-slate-200 dark:bg-slate-700">
         <img
@@ -145,9 +145,9 @@ export default function Projects() {
           </div>
         </Reveal>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
           {projects.map((project, i) => (
-            <Reveal key={project.id} variants={scaleIn} custom={i}>
+            <Reveal key={project.id} variants={scaleIn} custom={i} className="h-full">
               <ProjectCard project={project} />
             </Reveal>
           ))}
